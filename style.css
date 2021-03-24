@@ -1,0 +1,477 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: rgb(43, 213, 255);
+  --secondary: rgb(114, 247, 102);
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+  background-image: linear-gradient(
+    to right bottom,
+    var(--primary),
+    var(--secondary)
+  );
+}
+
+header {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  height: 17vh;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
+  background-color: rgba(248, 248, 248, 0.466);
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0px 0px 16px 0px black;
+}
+
+.logo-container,
+.nav-links,
+.dropdown {
+  display: flex;
+}
+.logo-text {
+  font-weight: 400;
+  margin: 5px;
+  margin-top: 5vh;
+}
+.logo-container {
+  flex: 1;
+  height: 17vh;
+  filter: drop-shadow(0px 5px 3px black);
+}
+.logo-text {
+  flex: 1;
+  height: 15vh;
+  filter: drop-shadow(3px 5px 3px rgb(255, 255, 255));
+}
+nav {
+  flex: 2;
+  filter: drop-shadow(3px 5px 3px rgb(255, 255, 255));
+}
+
+.nav-links,
+.dropdown-select a {
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #535366;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.dropdown {
+  width: 6rem;
+  position: relative;
+}
+
+.dropdown:hover .dropdown-list {
+  opacity: 1;
+  visibility: visible;
+  background-color: rgba(248, 248, 248, 0.356);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0px 0px 16px 0px black;
+}
+
+.dropdown-select {
+  border-radius: 0px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.dropdown-list {
+  border-radius: 4px;
+  position: absolute;
+  top: 2rem;
+  left: 10;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+  cursor: pointer;
+  transition: opacity 0.2s linear, visibility 0.2s linear;
+}
+.dropdown-list-item {
+  padding: 1rem;
+  color: #5f5f79;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.presentation {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  height: 90vh;
+  min-height: 60vh;
+  align-items: center;
+}
+
+.introduction {
+  flex: 1;
+}
+
+.intro-text {
+  font-size: 44px;
+  font-weight: 500;
+  background: linear-gradient(to right, #494964, #6f6f89);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.intro-text p {
+  margin-top: 5px;
+  font-size: 22px;
+  color: #585772;
+}
+.cover {
+  flex: 0;
+  display: flex;
+  justify-content: center;
+  height: 60vh;
+}
+
+.cover img {
+  height: 100%;
+  margin-top: 60px;
+  filter: drop-shadow(0px 5px 3px black);
+  animation: drop 1.5s ease;
+}
+
+
+.big-circle {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  opacity: 0.5;
+  height: 100%;
+}
+
+.mid-circle {
+  position: fixed;
+  top: 30%;
+  left: 40%;
+  z-index: -1;
+  height: 60%;
+}
+
+.small-circle {
+  position: fixed;
+  bottom: 0%;
+  left: 10%;
+  z-index: -1;
+  height: 30%;
+}
+
+.logo-circle {
+  position: absolute;
+  top: -20px;
+  left: 5px;
+  z-index: -1;
+  height: 100%;
+  opacity: 0.5;
+  transform: rotate(270deg);
+}
+
+.mid-page .parakeet {
+  height: 20vh;
+  margin-top: 50px;
+}
+.mid-page .parakeet h1{
+  background: linear-gradient(to right, #494964, #6f6f89);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.mid-page .about-birds {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
+.mid-page .about-birds img {
+  flex: 0;
+  height: 50vh;
+  margin-top: 20px;
+  left: 0;
+}
+.middle-section {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  left: 20px;
+}
+.container {
+  position: relative;
+  width: 1100px;
+  display: flex;
+  margin-top: 80px;
+  flex-wrap: wrap;
+  left: 4rem;
+}
+
+.container .box {
+  position: relative;
+  width: 275px;
+  height: 275px;
+  overflow: hidden;
+  transition: 0.5s;
+  border-radius: 1rem;
+}
+
+.container .box:hover {
+  z-index: 1;
+  transform: scale(1.5);
+  box-shadow: 0 25px 45px rgb(66, 66, 66);
+}
+
+.container .box .imgbx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.container .box .imgbx:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: transparent;
+  mix-blend-mode: multiply;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.container .box:hover .imgbx:before {
+  opacity: 0;
+}
+.container .box .imgbx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container .box .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  padding: 25px;
+  align-items: flex-end;
+  filter: drop-shadow(3px 1px 4px rgb(255, 255, 255));
+}
+
+.container .box .content h2 {
+  transition: 0.5s;
+  text-transform: uppercase;
+  margin-bottom: 200px;
+  font-size: 14px;
+  transform: translateY(300px);
+}
+
+.container .box:hover .content h2 {
+  transform: translateY(0);
+  transition-delay: 0.6s;
+}
+
+.container .box .content p {
+  transform: translateY(200px);
+  transition: 0.5s;
+  font-size: 14px;
+}
+
+.container .box:hover .content p {
+  transform: translateY(0);
+  transition-delay: 0.6s;
+}
+.parakeet h1 {
+  height: 10vh;
+  margin-top: 110px;
+  font-size: 40px;
+  margin-left: 30px;
+  color: #585772;
+}
+.parakeet p {
+  font-size: 22px;
+  margin-left: 20px;
+  color: #585772;
+}
+.title {
+  height: 10vh;
+  margin-top: 110px;
+  font-size: 22px;
+  margin-left: 30px;
+  color: #585772;
+}
+.cross-breeding {
+  position: relative;
+  width: 1100px;
+  display: flex;
+  flex-wrap: wrap;
+  left: 100px;
+  padding: 0;
+  margin: 0px;
+}
+
+.cross-breeding .clearbody-box {
+  margin-top: 3rem;
+  position: relative;
+  align-items: center;
+  width: 450px;
+  height: 281px;
+  margin-right: 5rem;
+  overflow: hidden;
+  transition: 0.5s;
+  border-radius: 1rem;
+}
+
+.cross-breeding .clearbody-box:hover {
+  z-index: 1;
+  transform: scale(1.5);
+  box-shadow: 0 25px 45px rgb(66, 66, 66);
+}
+.cross-breeding .clearbody-box .clearbody-imgbx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.cross-breeding .clearbody-box .clearbody-imgbx:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: transparent;
+  mix-blend-mode: multiply;
+  opacity: 1;
+  transition: 0.5s;
+}
+.cross-breeding .clearbody-box:hover .clearbody-imgbx:before {
+  opacity: 0;
+}
+.cross-breeding .clearbody-box .clearbody-imgbx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cross-breeding .clearbody-box .label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  padding: 25px;
+  align-items: center;
+  filter: drop-shadow(3px 1px 4px rgb(255, 255, 255));
+}
+.cross-breeding .clearbody-box .label h4 {
+  transition: 0.5s;
+  text-transform: uppercase;
+  margin-bottom: 180px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  transform: translateY(300px);
+}
+
+.cross-breeding .clearbody-box:hover .label h4 {
+  transform: translateY(0);
+  transition-delay: 0.9s;
+}
+
+.cross-breeding .clearbody-box .label p {
+  transform: translateY(260px);
+  transition: 0.5s;
+  font-size: 20px;
+}
+
+.cross-breeding .clearbody-box:hover .label p {
+  transform: translateY(0);
+  transition-delay: 1.2s;
+}
+@keyframes drop {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .presentation {
+    flex-direction: column;
+    align-items: center;
+  }
+  .introduction {
+    margin-top: 20vh;
+    margin-bottom: -20vh;
+    text-align: center;
+  }
+  .intro-text h1 {
+    font-size: 30px;
+  }
+  .intro-text p {
+    font-size: 18px;
+  }
+  .cover img {
+    height: 80%;
+  }
+  .logo-circle {
+    opacity: 0.4;
+  }
+  .big-circle,
+  .mid-circle {
+    opacity: 0.3;
+    height: 52%;
+    left: auto;
+    flex: end;
+  }
+  .logo-circle {
+    opacity: 0.3;
+    height: 90%;
+    left: 3rem;
+  }
+  .small-circle {
+    display: none;
+  }
+  
+}
